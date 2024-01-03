@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Paradise</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="reset-css.css">
+  <link rel="stylesheet" type="text/css" href="profile.css"/>
+</head>
+
+<body>
+<header>  
+  <div class="container-fluid banner">
+  <div class="row">
+      <div class="col-md-12">
+          <nav class="navbar navbar-md">
+              <a class="navbar-brand" href="#">Kids Paradise</a>
+
+              <ul class="nav">
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">HOME</a>
+                  </li>
+
+                  <li class="nav-item" >
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+
+                
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">PRODUCTS</a>
+                  </li>
+              
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">REGISTER</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">LOGIN</a>
+            </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">ADD PRODUCT</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">ADMIN</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PROFILE</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CART</a>
+                </li>
+
+                      <form th:method="POST" th:action="@{/logout}" sec:authorize="isAuthenticated()">
+                          <input class="btn btn-light " type="submit" value="LOG OUT">
+                      </form>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+</div>
+</div>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <div class="view-account">
+        <section class="module">
+            <div class="module-inner">
+                <div class="content-panel">
+                    <h2 class="title">Profile<span class="pro-label label label-warning">PRO</span></h2>
+                    <form class="form-horizontal">
+                        <fieldset class="fieldset">
+                            <h3 class="fieldset-title">Personal Info</h3>
+                            <div class="form-group avatar">
+                                <figure class="figure col-md-2 col-sm-3 col-xs-12">
+                                    <img class="img-rounded img-responsive" src="user-profile-picture.png" alt="">
+                                </figure>
+                                <div class="form-inline col-md-10 col-sm-9 col-xs-12">
+                                    <input type="file" class="file-uploader pull-left">
+                                    <button type="submit" class="btn btn-sm btn-default-alt pull-left">Update Image</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 col-sm-3 col-xs-12 control-label">User Name</label>
+                                <div class="col-md-10 col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" value="Rebecca">
+                                </div>
+                            </div>
+        
+                        </fieldset>
+                        <fieldset class="fieldset">
+                            <h3 class="fieldset-title">Contact Info</h3>
+                            <div class="form-group">
+                                <label class="col-md-2  col-sm-3 col-xs-12 control-label">Email</label>
+                                <div class="col-md-10 col-sm-9 col-xs-12">
+                                    <input type="email" class="form-control" value="Rebecca@website.com">
+                                    <p class="help-block">This is the email </p>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <hr>
+                        <div class="form-group">
+                            <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
+                                <input class="btn btn-primary" type="submit" value="Update Profile">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+CSS code
+
+
+
+<footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+<footer class="footer bg-transparent  py-2">
+<div class="container-fluid text-center">
+  <div class="footer-background h5 text-dark fixed-bottom">
+      &copy; Nikolay Ivanov - SoftUni Student 2023. All rights reserved.
+  </div>
+</div>
+</footer>
+
+
+<script src="../static/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

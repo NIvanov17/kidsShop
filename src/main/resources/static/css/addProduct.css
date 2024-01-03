@@ -1,0 +1,40 @@
+
+
+
+
+.banner .navbar {
+    margin-top: 3%;
+}
+
+.navbar-brand {
+    color: rgb(12, 12, 12);
+    font-size: 2.8em;
+    font-weight: 400;
+    margin-left: 10%;
+}
+
+
+.banner.nav {
+    margin-right: 5%;
+}
+
+.banner .nav li a {
+    color: rgb(12, 12, 12);
+    font-size: 1.5em;
+}
+
+.banner.nav-item {
+    color: #aaa;
+    font-size: 1.2em;
+}
+
+.banner .info {
+    margin-top: 15%;
+    transform: translateY(-15%);
+
+
+}
+
+.footer{
+    color: rgb(0, 0, 0);
+}

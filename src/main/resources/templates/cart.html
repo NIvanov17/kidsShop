@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Paradise</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="reset-css.css">
+  <link rel="stylesheet" type="text/css" href="cart.css"/>
+</head>
+
+<body>
+<header>  
+  <div class="container-fluid banner">
+  <div class="row">
+      <div class="col-md-12">
+          <nav class="navbar navbar-md">
+              <a class="navbar-brand" href="#">Kids Paradise</a>
+
+              <ul class="nav">
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">HOME</a>
+                  </li>
+
+                  <li class="nav-item" >
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+
+                
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">PRODUCTS</a>
+                  </li>
+              
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">REGISTER</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">LOGIN</a>
+            </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">ADD PRODUCT</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">ADMIN</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PROFILE</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CART</a>
+                </li>
+
+                      <form th:method="POST" th:action="@{/logout}" sec:authorize="isAuthenticated()">
+                          <input class="btn btn-light " type="submit" value="LOG OUT">
+                      </form>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+</div>
+</div>
+
+<div class="card">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                    <div class="col align-self-center text-right text-muted">3 items</div>
+                </div>
+            </div>    
+            <div class="row border-top border-bottom">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="изтеглен файл.jpg"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="изтеглен файл.jpg"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="row border-top border-bottom">
+                <div class="row main align-items-center">
+                    <div class="col-2"><img class="img-fluid" src="изтеглен файл.jpg"></div>
+                    <div class="col">
+                        <div class="row text-muted">Shirt</div>
+                        <div class="row">Cotton T-shirt</div>
+                    </div>
+                    <div class="col">
+                        <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                    </div>
+                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                </div>
+            </div>
+            <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+        </div>
+        <div class="col-md-4 summary">
+            <div><h5><b>Summary</b></h5></div>
+            <hr>
+            <div class="row">
+                <div class="col" style="padding-left:0;">ITEMS 3</div>
+                <div class="col text-right">&euro; 132.00</div>
+            </div>
+            <form>
+                <p>SHIPPING</p>
+                <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+            </form>
+            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                <div class="col">TOTAL PRICE</div>
+                <div class="col text-right">&euro; 137.00</div>
+            </div>
+            <button class="btn">CHECKOUT</button>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+<footer class="footer bg-transparent  py-2">
+<div class="container-fluid text-center">
+  <div class="footer-background h5 text-dark fixed-bottom">
+      &copy; Nikolay Ivanov - SoftUni Student 2023. All rights reserved.
+  </div>
+</div>
+</footer>
+
+
+<script src="../static/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

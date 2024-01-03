@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Paradise</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="reset-css.css">
+    <link rel="stylesheet" href="addProduct.css" />
+
+    <title>Add Product</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid banner">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-md">
+                        <a class="navbar-brand" href="#">Kids Paradise</a>
+          
+                        <ul class="nav">
+          
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">HOME</a>
+                            </li>
+          
+                            <li class="nav-item" >
+                              <a class="nav-link" href="#">ABOUT</a>
+                            </li>
+          
+                          
+                            <li class="nav-item">
+                               <a class="nav-link" href="#">PRODUCTS</a>
+                            </li>
+                        
+          
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">CONTACT</a>
+                          </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">REGISTER</a>
+                      </li>
+          
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">LOGIN</a>
+                      </li>
+          
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ADD PRODUCT</a>
+                            </li>
+          
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ADMIN</a>
+                            </li>
+          
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">PROFILE</a>
+                          </li>
+          
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">CART</a>
+                          </li>
+          
+                                <form method="" action="">
+                                    <input class="btn btn-light " type="submit" value="LOG OUT">
+                                </form>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+    </header>
+    
+    <div class="container">
+        <h1 class="text-center text-capitalize  text-black">Upload Product</h1>
+        <form class="main-form mx-auto col-md-8 d-flex flex-column justify-content-center"
+             method="" action="#" enctype="multipart/form-data">
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="name" class="text-black font-weight-bold">Product Name</label>
+                    <input id="name" type="text" class="form-control"
+                           placeholder="Product Name"
+                           field="productName"
+                           errorclass="is-invalid"
+                    />
+                    <p class="errors alert alert-danger">
+                        Product name is required.
+                    </p>
+                </div>
+    
+                <div class="form-group col-md-6 mb-3">
+                    <label class="text-center text-black font-weight-bold" for="brand">Category</label>
+                    <select id="brand"
+                            name="brand"
+                            errorclass="is-invalid"
+                            class="form-control">
+                        <option value="">Select a Category</option>
+                        <option>Category
+                        </option>
+                    </select>
+                    <p class=" errors alert alert-danger">
+                        Category is required.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="price" class="text-black font-weight-bold">Price</label>
+                    <input id="price" type="number" class="form-control"
+                           placeholder="Suggested price"
+                           field="price"
+                           errorclass="is-invalid"
+                    />
+                    <p class="errors alert alert-danger">
+                        Price is required.
+                    </p>
+                </div>
+    
+                <div class="form-group col-md-6 mb-3">
+                    <label class="text-center text-black font-weight-bold" for="engine">Age</label>
+                    <select id="age" name="age" class="form-control">
+                        <option value=""> Select engine type</option>
+                        <option>
+                            Age
+                        </option>
+    
+                    </select>
+                    <p class="errors alert alert-danger">
+                        Age field is required.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="quantity" class="text-black font-weight-bold">Quantity</label>
+                    <input id="quantity" type="number" step="1" class="form-control"
+                           placeholder="Quantity"
+                           field="quantity"
+                           errorclass="is-invalid"
+                    />
+                    <p class="errors alert alert-danger">
+                        Quantity is required.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="text-white font-weight-bold" for="description">Description</label>
+                <textarea id="description" type="textarea" class="form-control" rows="3"
+                          placeholder="Description" th:field="*{description}"
+                          th:errorclass="is-invalid"></textarea>
+                <p class="errors alert alert-danger">
+                    Description is required.
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="img" class="text-white font-weight-bold" >Image</label>
+                <input type="file" name="file" class="form-control" id="img">
+            </div>
+    
+    
+            <div class="row">
+                <div class="col col-md-4">
+                    <div class="button-holder d-flex">
+                        <input type="submit" class="btn btn-info btn-lg" value="Submit Offer"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div>
+    
+        <footer>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+          <footer class="footer bg-transparent  py-2">
+          <div class="container-fluid text-center">
+            <div class="footer-background h5 text-dark fixed-bottom">
+                &copy; Nikolay Ivanov - SoftUni Student 2023. All rights reserved.
+            </div>
+          </div>
+        </footer>
+    
+    </body>
+    
+    </html>

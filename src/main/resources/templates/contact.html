@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Paradise</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="reset-css.css">
+  <link rel="stylesheet" type="text/css" href="contact.css"/>
+</head>
+
+<body>
+<header>  
+  <div class="container-fluid banner">
+  <div class="row">
+      <div class="col-md-12">
+          <nav class="navbar navbar-md">
+              <a class="navbar-brand" href="#">Kids Paradise</a>
+
+              <ul class="nav">
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">HOME</a>
+                  </li>
+
+                  <li class="nav-item" >
+                    <a class="nav-link" href="#">ABOUT</a>
+                  </li>
+
+                
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">PRODUCTS</a>
+                  </li>
+              
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">REGISTER</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">LOGIN</a>
+            </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">ADD PRODUCT</a>
+                  </li>
+
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">ADMIN</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">PROFILE</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CART</a>
+                </li>
+
+                      <form th:method="POST" th:action="@{/logout}" sec:authorize="isAuthenticated()">
+                          <input class="btn btn-light " type="submit" value="LOG OUT">
+                      </form>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+    </header>
+</div>
+</div>
+
+
+<div id="form-main">
+    <div id="form-div">
+      <form class="form" id="form1">
+        
+        <p class="name">
+          <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
+        </p>
+        
+        <p class="email">
+          <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
+        </p>
+        
+        <p class="text">
+          <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
+        </p>
+        
+        
+        <div class="submit">
+          <input type="submit" value="SEND" id="button-blue"/>
+          <div class="ease"></div>
+        </div>
+      </form>
+    </div>
+
+
+
+<footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+<footer class="footer bg-transparent  py-2">
+<div class="container-fluid text-center">
+  <div class="footer-background h5 text-dark fixed-bottom">
+      &copy; Nikolay Ivanov - SoftUni Student 2023. All rights reserved.
+  </div>
+</div>
+</footer>
+
+
+<script src="../static/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
